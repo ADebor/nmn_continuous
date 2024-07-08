@@ -1,0 +1,365 @@
+wandb_version: 1
+
+name:
+  desc: null
+  value: MultipleReferences
+norm_obs:
+  desc: null
+  value: true
+norm_rews:
+  desc: null
+  value: true
+norm_adv:
+  desc: null
+  value: true
+use_sde:
+  desc: null
+  value: false
+sde_sample_freq:
+  desc: null
+  value: 4
+use_beta:
+  desc: null
+  value: false
+num_actors:
+  desc: null
+  value: 5
+n_steps:
+  desc: null
+  value: 2048
+batch_size:
+  desc: null
+  value: 512
+n_epochs:
+  desc: null
+  value: 10
+total_n_steps:
+  desc: null
+  value: 1000000
+gamma:
+  desc: null
+  value: 0.9
+gae_lambda:
+  desc: null
+  value: 0.95
+learning_rate:
+  desc: null
+  value: 0.001
+lr_schedule:
+  desc: null
+  value: adaptive
+schedule_type:
+  desc: null
+  value: standard
+clip_range:
+  desc: null
+  value: 0.2
+ent_coef:
+  desc: null
+  value: 0.001
+vf_coef:
+  desc: null
+  value: 0.9
+grad_norm:
+  desc: null
+  value: 1.0
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.12
+    cli_version: 0.16.4
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: true
+    start_time: 1719392031.0
+    t:
+      1:
+      - 1
+      - 50
+      - 55
+      2:
+      - 1
+      - 50
+      - 55
+      3:
+      - 3
+      - 13
+      - 16
+      - 22
+      - 23
+      - 35
+      4: 3.10.12
+      5: 0.16.4
+      8:
+      - 2
+      - 5
+      13: linux-x86_64
+algo:
+  desc: null
+  value: RecurrentPPO
+policy_class:
+  desc: null
+  value: <class 'agents.policies.NmnRecurrentAcPolicy'>
+device:
+  desc: null
+  value: cuda:0
+verbose:
+  desc: null
+  value: 0
+policy_kwargs:
+  desc: null
+  value: '{''mlp_cls'': ''agents.NmnAcNetwork'', ''mlp_kwargs'': {''features_dim'':
+    4, ''rnn_features_dim'': 75, ''layers'': [20, 10], ''activation_cls'': <class
+    ''torch.nn.modules.activation.ReLU''>, ''nm_signal_dim'': 20, ''nm_layers'': [30,
+    20], ''nm_activation_cls'': <class ''nmn.nmn.VecovenActivation''>, ''device'':
+    ''cuda''}, ''share_features_extractor'': True, ''shared_rnn'': False, ''enable_critic_rnn'':
+    True, ''rnn_type'': <class ''nmn.common.GRU''>, ''rnn_hidden_size'': 75, ''n_rnn_layers'':
+    2, ''rnn_input_dim'': 6, ''ortho_init'': False, ''log_std_init'': 0.3, ''is_action_net_nmd'':
+    True, ''is_value_net_nmd'': True, ''nm_activation_cls'': <class ''nmn.nmn.VecovenActivation''>}'
+num_timesteps:
+  desc: null
+  value: 0
+_total_timesteps:
+  desc: null
+  value: 1000000
+_num_timesteps_at_start:
+  desc: null
+  value: 0
+seed:
+  desc: null
+  value: None
+action_noise:
+  desc: null
+  value: None
+start_time:
+  desc: null
+  value: 1719392032163781556
+tensorboard_log:
+  desc: null
+  value: runs/pr2gffmx
+_last_obs:
+  desc: null
+  value: "[[-1.7195245   1.2488319  -0.9562589  -0.10557396  0.          0.\n   0.\
+    \          0.          0.          0.        ]\n [ 0.4799796  -1.5539459   0.6160038\
+    \   0.10724064  0.          0.\n   0.          0.          0.          0.    \
+    \    ]\n [ 0.63891083  0.26603556  0.3496927  -0.7261905   0.          0.\n  \
+    \ 0.          0.          0.          0.        ]\n [-0.48209253 -0.671116   -1.3433461\
+    \   1.8091909   0.          0.\n   0.          0.          0.          0.    \
+    \    ]\n [ 1.0827078   0.71019036  1.3339055  -1.0847291   0.          0.\n  \
+    \ 0.          0.          0.          0.        ]]"
+_last_episode_starts:
+  desc: null
+  value: '[ True  True  True  True  True]'
+_last_original_obs:
+  desc: null
+  value: "[[-2.2075987   0.7987596  -1.5437603  -0.45863742  0.          0.\n   0.\
+    \          0.          0.          0.        ]\n [ 0.3397044  -1.0547333   0.9161455\
+    \  -0.32476917  0.          0.\n   0.          0.          0.          0.    \
+    \    ]\n [ 0.5237668   0.14883079  0.49948472 -0.84902817  0.          0.\n  \
+    \ 0.          0.          0.          0.        ]\n [-0.77449644 -0.47091287 -2.149383\
+    \    0.7458204   0.          0.\n   0.          0.          0.          0.   \
+    \     ]\n [ 1.0377396   0.4425529   2.0393486  -1.0745622   0.          0.\n \
+    \  0.          0.          0.          0.        ]]"
+_episode_num:
+  desc: null
+  value: 0
+_current_progress_remaining:
+  desc: null
+  value: 1.0
+_stats_window_size:
+  desc: null
+  value: 100
+ep_info_buffer:
+  desc: null
+  value: deque([], maxlen=100)
+ep_success_buffer:
+  desc: null
+  value: deque([], maxlen=100)
+_n_updates:
+  desc: null
+  value: 0
+_custom_logger:
+  desc: null
+  value: 'False'
+env:
+  desc: null
+  value: <stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x7b04ea937bb0>
+_vec_normalize_env:
+  desc: null
+  value: <stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x7b04ea937bb0>
+observation_space:
+  desc: null
+  value: "Box([      -inf       -inf       -inf       -inf       -inf       -inf\n\
+    \       -inf       -inf -3.1415927       -inf], [      inf       inf       inf\
+    \       inf       inf       inf       inf\n       inf 3.1415927       inf], (10,),\
+    \ float32)"
+action_space:
+  desc: null
+  value: Box(-3.141592653589793, 3.141592653589793, (1,), float64)
+n_envs:
+  desc: null
+  value: 5
+max_grad_norm:
+  desc: null
+  value: 1.0
+rollout_buffer_class:
+  desc: null
+  value: None
+rollout_buffer_kwargs:
+  desc: null
+  value: '{}'
+clip_range_vf:
+  desc: null
+  value: None
+normalize_advantage:
+  desc: null
+  value: 'True'
+target_kl:
+  desc: null
+  value: None
+_last_rnn_states:
+  desc: null
+  value: "RNNStates(pi=(tensor([[[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n      \
+    \    0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n\
+    \          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0.,\
+    \ 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0.,\n          0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.],\n  \
+    \       [0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n      \
+    \    0., 0., 0., 0., 0., 0.]],\n\n        [[0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.],\n         [0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0.,\
+    \ 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n      \
+    \    0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n\
+    \          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0.,\
+    \ 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0.,\n          0., 0., 0., 0., 0., 0.]]], device='cuda:0'),), vf=(tensor([[[0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0.,\
+    \ 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n      \
+    \    0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n\
+    \          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0.,\
+    \ 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0.,\n          0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.]],\n\n\
+    \        [[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n  \
+    \        0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.],\n         [0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0.,\
+    \ 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n      \
+    \    0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n\
+    \          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n          0., 0., 0., 0., 0.,\
+    \ 0.]]], device='cuda:0'),))"
+policy:
+  desc: null
+  value: "NmnRecurrentAcPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten):\
+    \ Flatten(start_dim=1, end_dim=-1)\n  )\n  (pi_features_extractor): FlattenExtractor(\n\
+    \    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (vf_features_extractor):\
+    \ FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor):\
+    \ NmnAcNetwork(\n    (policy_net): ModuleDict(\n      (main_net_actor): Nmod(\n\
+    \        (layers): Sequential(\n          (layer_0): Linear(in_features=4, out_features=20,\
+    \ bias=True)\n          (activation_0): ReLU()\n          (layer_1): Linear(in_features=20,\
+    \ out_features=10, bias=True)\n          (activation_1): ReLU()\n        )\n \
+    \     )\n      (nm_net_actor): Nmod(\n        (layers): Sequential(\n        \
+    \  (layer_0): Linear(in_features=75, out_features=30, bias=True)\n          (activation_0):\
+    \ VecovenActivation(\n            (nm_params): ParameterList(\n              \
+    \  (0): Parameter containing: [torch.float32 of size 20x30 (cuda:0)]\n       \
+    \         (1): Parameter containing: [torch.float32 of size 20x30 (cuda:0)]\n\
+    \            )\n            (activation): ReLU()\n          )\n          (layer_1):\
+    \ Linear(in_features=30, out_features=20, bias=True)\n          (activation_1):\
+    \ VecovenActivation(\n            (nm_params): ParameterList(\n              \
+    \  (0): Parameter containing: [torch.float32 of size 20x20 (cuda:0)]\n       \
+    \         (1): Parameter containing: [torch.float32 of size 20x20 (cuda:0)]\n\
+    \            )\n            (activation): ReLU()\n          )\n        )\n   \
+    \   )\n    )\n    (value_net): ModuleDict(\n      (main_net_critic): Nmod(\n \
+    \       (layers): Sequential(\n          (layer_0): Linear(in_features=4, out_features=20,\
+    \ bias=True)\n          (activation_0): ReLU()\n          (layer_1): Linear(in_features=20,\
+    \ out_features=10, bias=True)\n          (activation_1): ReLU()\n        )\n \
+    \     )\n      (nm_net_critic): Nmod(\n        (layers): Sequential(\n       \
+    \   (layer_0): Linear(in_features=75, out_features=30, bias=True)\n          (activation_0):\
+    \ VecovenActivation(\n            (nm_params): ParameterList(\n              \
+    \  (0): Parameter containing: [torch.float32 of size 20x30 (cuda:0)]\n       \
+    \         (1): Parameter containing: [torch.float32 of size 20x30 (cuda:0)]\n\
+    \            )\n            (activation): ReLU()\n          )\n          (layer_1):\
+    \ Linear(in_features=30, out_features=20, bias=True)\n          (activation_1):\
+    \ VecovenActivation(\n            (nm_params): ParameterList(\n              \
+    \  (0): Parameter containing: [torch.float32 of size 20x20 (cuda:0)]\n       \
+    \         (1): Parameter containing: [torch.float32 of size 20x20 (cuda:0)]\n\
+    \            )\n            (activation): ReLU()\n          )\n        )\n   \
+    \   )\n    )\n  )\n  (action_net): Nmod(\n    (layers): Sequential(\n      (0):\
+    \ Linear(in_features=10, out_features=1, bias=True)\n      (1): VecovenActivation(\n\
+    \        (nm_params): ParameterList(\n            (0): Parameter containing: [torch.float32\
+    \ of size 20x1 (cuda:0)]\n            (1): Parameter containing: [torch.float32\
+    \ of size 20x1 (cuda:0)]\n        )\n        (activation): Identity()\n      )\n\
+    \    )\n  )\n  (value_net): Nmod(\n    (layers): Sequential(\n      (0): Linear(in_features=10,\
+    \ out_features=1, bias=True)\n      (1): VecovenActivation(\n        (nm_params):\
+    \ ParameterList(\n            (0): Parameter containing: [torch.float32 of size\
+    \ 20x1 (cuda:0)]\n            (1): Parameter containing: [torch.float32 of size\
+    \ 20x1 (cuda:0)]\n        )\n        (activation): Identity()\n      )\n    )\n\
+    \  )\n  (rnn_actor): GRU(6, 75, num_layers=2)\n  (rnn_critic): GRU(6, 75, num_layers=2)\n\
+    )"
+rollout_buffer:
+  desc: null
+  value: <sb3_contrib.common.recurrent.buffers.RecurrentRolloutBuffer object at 0x7b04ea17be20>
+_logger:
+  desc: null
+  value: <stable_baselines3.common.logger.Logger object at 0x7b04c168f8b0>

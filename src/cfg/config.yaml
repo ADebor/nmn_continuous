@@ -1,0 +1,97 @@
+# Task name - used to pick the class to load
+task_name: ${task.name}
+# experiment name. defaults to name of training config
+experiment: ''
+
+# if set to positive integer, overrides the default number of environments
+num_envs: ''
+
+# seed - set to -1 to choose random seed
+seed: null
+# set to True for deterministic performance
+torch_deterministic: False # TODO handle True case (random number generators, nondeterministic functions, RNN/LSTM workarounds)
+
+# device for tensors
+torch_device: 'cuda:0'
+
+# training hyperparameters
+total_n_steps: ''
+
+# network config
+ortho_init: ''
+log_std_init: ''
+mlp_activation_cls: ''
+nm_signal_dim: '' 
+nm_activation_cls: ''
+mlp_initializer: ''
+observation_type: ''
+is_action_net_nmd: ''
+is_value_net_nmd: ''
+
+# device to run RL
+rl_device: 'cuda:0'
+
+# evaluation settings
+eval: False
+eval_n_episodes: 2
+eval_freq: 10000
+eval_log_path: 'eval_logs'
+eval_best_model_save_path: 'best_model'
+eval_deterministic: True
+eval_render: False
+eval_verbose: 1
+
+# post-training evaluation settings
+post_eval:
+  enable: False
+  num_envs: 1
+  n_episodes: 500
+  max_steps: 50
+  log_path: 'logs'
+  deterministic: True
+  render: False
+  enable_recording: False 
+  recording_interval: 1
+  recording_length: ${.max_steps} * ${.n_episodes}
+  recording_dir: '/videos'
+  seed: 7
+  z_log_freq: 10
+
+
+# recording settings
+enable_recording: False
+recording_interval: 5000
+recording_length: 800
+recording_dir: 'videos'
+
+# model saving settings
+save_model: False
+save_freq: 10000
+save_dir: 'models'
+save_grad_freq: 0
+
+# tensorboard settings
+tensorboard_log_dir: 'runs'
+
+# wandb settings
+wandb_activate: False
+wandb_mode: ${if:${wandb_activate},online,disabled}
+wandb_group: ''
+wandb_name: ${train.name}
+wandb_entity: ''
+wandb_project: 'nmn_ppo'
+
+
+# set default task and default training config based on task
+defaults:
+  - _self_  # config params from this file will be overriden by subsequent default config
+  - task: MultipleReferences
+  - train: ${task}PPO
+  - agent: rnn
+  - override hydra/job_logging: disabled
+
+# set the directory where the output files get saved
+hydra:
+  output_subdir: null
+  run:
+    dir: .

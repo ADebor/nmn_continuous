@@ -1,0 +1,43 @@
+name: nmn
+rnn:
+  hidden_size: 75
+  n_layers: 2
+  cell_type: nmn.GRU
+  # activation: null
+
+mlp:
+  features_dim: "???"
+  rnn_features_dim: ${..rnn.hidden_size}
+  layers: 
+    - 20 
+    - 10
+  activation_cls: ${resolve_default:torch.nn.ReLU, ${...mlp_activation_cls}}
+  nm_signal_dim: ${resolve_default:20, ${...nm_signal_dim}}
+  nm_layers: 
+    - 30
+    - ${..nm_signal_dim}
+  nm_activation_cls: ${resolve_default:nmn.VecovenActivation, ${...nm_activation_cls}}
+  device: "cuda"
+
+policy: 
+  cls: agents.NmnRecurrentAcPolicy
+  kwargs:
+    mlp_cls: agents.NmnAcNetwork
+    mlp_kwargs: ${...mlp}
+    
+    share_features_extractor: True
+    
+    shared_rnn: False
+    enable_critic_rnn: True
+    
+    rnn_type: ${...rnn.cell_type}
+    rnn_hidden_size: ${...rnn.hidden_size}
+    n_rnn_layers: ${...rnn.n_layers}
+    rnn_input_dim: "???"
+
+    ortho_init: False
+    log_std_init: 0.3
+
+    is_action_net_nmd: ${resolve_default:True, ${....is_action_net_nmd}}
+    is_value_net_nmd: ${resolve_default:True, ${....is_value_net_nmd}}
+    nm_activation_cls: ${...mlp.nm_activation_cls}

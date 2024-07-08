@@ -1,0 +1,58 @@
+# used to create the object
+name: "MultipleReferences-v1"
+
+# if given, will override the device setting in gym.
+env:
+  num_envs: ${resolve_default:5,${...num_envs}}  
+  params:
+    max_steps: 200
+    max_reward: 100
+    min_reward: -50
+
+  post_eval_params:
+    max_steps: ${resolve_default:200, ${....post_eval.max_steps}}
+    max_reward: 100
+    min_reward: -50
+  
+  # clip_observations: null
+  # clip_actions: null
+ 
+  # observation 
+  # asymmetric_observations: False
+
+wrappers:
+  observation_type: ${resolve_default:"full", ${...observation_type}} # can be "full", "full_current", or "current" 
+  observation_wrapper:
+    _target_: environments.MetaObs
+    observation_type: ${..observation_type}
+  reward_as_info_wrapper:
+    _target_: environments.RewardAsInfoWrapper
+  wrapper_list: 
+    - ${..observation_wrapper}
+    - ${..reward_as_info_wrapper}
+
+# domain_randomization:
+#   randomize: False
+#   min_frequency: 720
+#   randomization_params:
+#     observations:
+#       on_reset:
+#         operation: "additive"
+#         distribution: "gaussian"
+#         distribution_parameters: [0, .0001]
+#       on_interval:
+#         frequency_interval: 1
+#         operation: "additive"
+#         distribution: "gaussian"
+#         distribution_parameters: [0, .002]
+#     actions:
+#       on_reset:
+#         operation: "additive"
+#         distribution: "gaussian"
+#         distribution_parameters: [0, 0.015]
+#       on_interval:
+#         frequency_interval: 1
+#         operation: "additive"
+#         distribution: "gaussian"
+#         distribution_parameters: [0., 0.05]
+    

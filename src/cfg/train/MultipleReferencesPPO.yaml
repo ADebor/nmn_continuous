@@ -1,0 +1,30 @@
+name: ${resolve_default:'MultipleReferences',${..experiment}}
+
+# normalization
+norm_obs: True
+norm_rews: True
+norm_adv: True
+
+# sde and beta
+use_sde: False
+sde_sample_freq: 4
+use_beta: False
+
+# value_bootstrap: True 
+num_actors: ${..task.env.num_envs}
+
+# training length
+n_steps: 2048
+batch_size: 512
+n_epochs: 10
+total_n_steps: ${resolve_default:1000000,${..total_n_steps}}
+
+# hyperparameters
+gamma: 0.9 
+gae_lambda: 0.95
+learning_rate: 0.001 
+clip_range: 0.2
+ent_coef: 0.001
+vf_coef: 0.9
+grad_norm: 1.0
+    

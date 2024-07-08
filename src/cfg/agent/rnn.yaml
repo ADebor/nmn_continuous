@@ -1,0 +1,32 @@
+name: rnn
+rnn:
+  hidden_size: 75
+  n_layers: 2
+  cell_type: nmn.GRU
+  # activation: null
+
+mlp:
+  features_dim: ${..rnn.hidden_size}
+  layers: 
+    - 20
+    - 10
+  activation_cls: ${resolve_default:torch.nn.ReLU, ${...mlp_activation_cls}}
+
+policy: 
+  cls: agents.CustomMlpRecurrentAcPolicy
+  kwargs:
+    mlp_cls: agents.AcNetwork
+    mlp_kwargs: ${...mlp}
+    
+    share_features_extractor: True
+    
+    shared_rnn: False
+    enable_critic_rnn: True
+    
+    rnn_type: ${...rnn.cell_type}
+    rnn_hidden_size: ${...rnn.hidden_size}
+    n_rnn_layers: ${...rnn.n_layers}
+
+    ortho_init: False
+    log_std_init: 0.3
+

@@ -1,0 +1,147 @@
+{
+    "os": "Linux-6.5.0-41-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-06-26T08:53:51.695596",
+    "startedAt": "2024-06-26T08:53:51.022125",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "num_envs=5",
+        "agent=nmn",
+        "wandb_activate=True",
+        "wandb_project=neuromod"
+    ],
+    "state": "running",
+    "program": "/home/adebor/sb3_ws/nmn_continuous/src/main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "host": "adebor-ThinkPad-X1-Extreme-Gen-5",
+    "username": "adebor",
+    "executable": "/home/adebor/sb3_ws/sb3.venv/bin/python",
+    "cpu_count": 14,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 1898.0893999999996,
+        "min": 400.0,
+        "max": 4180.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3957.882,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3378.205,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3284.932,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4279.255,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 3333.585,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 3168.374,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 853.479,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4137.023,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1636.999,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3463.462,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3435.419,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 1448.755,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3321.069,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 1183.366,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 913.767,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 1095.56,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 195.8027114868164,
+            "used": 167.76182174682617
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 31.03921127319336
+    }
+}
